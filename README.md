@@ -1,4 +1,4 @@
 # MERN-STACK
 I have paid 25k for this course 
 
-what is the gain after the greatest comeback in the crown in the world 
+i want to commit some changes in the repo 
