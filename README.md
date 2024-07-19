@@ -1,4 +1,1 @@
-# sample
-I have paid 25k for this course 
-
-i want to commit some changes in the repo 
+It's all regret now ! Thought what if i started that time i creasted this repository! It would have be different! 
