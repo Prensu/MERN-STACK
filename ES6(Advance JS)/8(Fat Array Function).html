@@ -1,0 +1,36 @@
+<script> 
+
+    // //how we do in es5 
+    var sum=function()
+    {
+        var a=5;
+        var b=10;
+        return a+b;
+    }
+
+    console.log(sum());
+
+
+    //now ES6
+    const sum =() =>
+{
+    let a=25;
+    let b=10;
+    return a+b;
+}
+console.log(sum());
+
+
+// //more simpler way in ES6
+      let a=25;
+     let b=10;
+//    //use of fat arrow function 
+const sum=() => a+b;
+console.log(sum());
+
+//again most simpler to use but little difficult to understand 
+let a=45;
+
+const sum=(b) => a+b ;
+console.log(sum(10));
+</script>

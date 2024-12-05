@@ -1,0 +1,23 @@
+<script> 
+  const biodata={
+    name:"binod",
+    age:26,
+    deg:'mcs',
+    hobby:{
+      first:'kabaddi' 
+      sec:'wasting time on youtube'
+    }
+  };
+//for using the array elements i need to oop approach
+  console.log(`My name is prensu dangol and my friend is ${biodata.name}`);
+//this is time consuming so let's use different approach destructuring 
+
+let {name,age,deg,hobby}=biodata;
+console.log(`My name is prensu dangol and my friend is ${name} and he is just ${age} years old`);
+
+console.log(`i am passionate in ${hobby.sec}`);
+
+</script>
+
+
+

@@ -1,0 +1,28 @@
+<script>
+    // var name = "Vinod";
+    // console.log(name);
+
+    // let name = 'bahadur';
+    // console.log(name);
+
+    // I learned the difference in block scope and function scope 
+    // In block scope, the `let` and `const` keywords are only accessible within the block,
+    // whereas in function scope, the variable is accessible throughout the entire function.
+
+    function inimini() {
+        var name = 'hari';  // Function-scoped variable
+        console.log(name);  // Output: hari
+        
+        if (true) {
+            let name = 'aman';  // Block-scoped variable inside the if block
+            console.log(name);  // Output: aman
+        }
+    }
+
+    inimini();  // This will run the function and log "hari" and "aman"
+
+    // The following line will cause an error because the `name` inside the function
+    // is not accessible outside the function.
+    // console.log(name);  // Error: name is not defined outside the function
+
+</script>

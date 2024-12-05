@@ -1,0 +1,47 @@
+<script>
+// //normal es6
+// const sum=(a,b)  => a+b
+// console.log(sum(20,20));
+
+// what the problem occured in normal programming 
+// function mul(a,b)
+// {
+//     console.log(a*b);
+
+// }
+// mult(4);
+
+
+// now in ES5
+// function mul(a,b)
+// {
+//     console.log(b);
+//     console.log(a*b);
+
+// }
+
+// what the fuck line is this used to solve problem in es5
+// function mult(a,b)
+// {
+//     b=(typeof b!=='undefined')? b:2;
+//     console.log(a*b);
+
+// }
+
+
+// .................
+// Now finally we are learning how problem solved in es6
+function mul(a,b=4)
+{
+    console.log(a*b);
+}
+mul(4);
+
+
+// !boom !! So , b=4 was given !! 
+
+// !boom more advanced method is here 
+const mult=(a,b=5) => a*b 
+
+console.log(mult(4));
+</script>

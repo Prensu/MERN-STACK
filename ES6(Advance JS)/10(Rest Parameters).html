@@ -1,0 +1,47 @@
+<script>
+    function sum(a,b)
+    {
+        console.log(a+b);
+
+    }
+    sum(1,2,3,4,5,6,7);
+
+    // so the which will the program take ??so this problem was solved in es6 
+// the rest parameter allows indefinite amount of parameters as an array
+
+function sum(...inputs)
+{
+    console.log(inputs);
+}
+ sum(1,2,3,4,5,6);
+
+
+
+function sum(...inputs)
+{
+    console.log(...inputs);
+    let total=0;
+    for (let i of inputs)
+        {
+            total+=i;
+        }
+        console.log(total);      
+}
+
+sum(1,2,3,4,5,6);
+
+
+//finally the final code is here ! yahoo 
+function fun(a,b,...c)
+{
+    console.log(`${a} ${b}`);
+    console.log(c);
+    console.log(c[0]);
+    console.log(c.length);
+    console.log(c.indexOf('Edan'));
+}
+
+fun('Ronaldo','Neymar','Pele','Messi','Edan');
+
+
+</script>
