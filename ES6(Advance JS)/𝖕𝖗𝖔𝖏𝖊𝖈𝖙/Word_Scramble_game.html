@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scramble Word Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            line-height: 15vh;
+            background-color: #20bf6b;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            text-shadow: 0 1px 0 #efefef,
+                         0 2px 0 #efefef,
+                         0 1px 0 #efefef,
+                         0 1px 0 #efefef,
+                         0 30px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #7bed9f;
+        }
+
+        .gameArea {
+            width: 50%;
+            height: 400px;
+            padding: 20px 0;
+            background-color: #2ed573;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        input {
+            width: 40%;
+            padding: 15px 0;
+            text-align: center;
+            outline: none;
+            border: none;
+            border-radius: 25px;
+            background-color: #dff9fb;
+            color: black;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guess the Word Game</h1>
+    </header>
+
+    <section>
+        <div class="gameArea">
+            <h3 class="msg"></h3>
+            <input type="text" class="hidden">
+            <button class="btn">Click here to start</button>
+        </div>
+    </section>
+
+    <script>
+        const msg = document.querySelector('.msg');
+        const guess = document.querySelector('input');
+        const btn = document.querySelector('.btn');
+        let play = false;
+        let newWords = "";
+        let scrambledWord = "";
+        const sWords = [
+            'python', 'java', 'golang', 'unity', 'c++', 'c', 'html',
+            'css', 'javascript', 'php', 'angular', 'reactjs', 'swift', 'android', 'sql'
+        ];
+
+        // Function to scramble a word
+        const scrambleWords = (word) => {
+            let arr = word.split(''); // Convert word to an array of characters
+            for (let i = arr.length - 1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1)); // Random index
+                [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap characters
+            }
+            return arr.join(''); // Join the array back into a string
+        };
+
+        // Function to select a random word
+        const createNewWords = () => {
+            let ranNum = Math.floor(Math.random() * sWords.length);
+            return sWords[ranNum];
+        };
+
+        btn.addEventListener('click', function () {
+            if (!play) {
+                play = true;
+                btn.innerHTML = "Guess";
+                guess.classList.toggle('hidden');
+                newWords = createNewWords();
+                scrambledWord = scrambleWords(newWords);
+                msg.innerHTML = `Guess the word: ${scrambledWord}`;
+            } else {
+                let userGuess = guess.value;
+                if (userGuess === newWords) {
+                    play = false;
+                    msg.innerHTML = `Correct! It was "${newWords}".`;
+                    btn.innerHTML = "Play Again";
+                    guess.classList.toggle('hidden');
+                    guess.value = "";
+                } else {
+                    msg.innerHTML = `Wrong! Try again: ${scrambledWord}`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
