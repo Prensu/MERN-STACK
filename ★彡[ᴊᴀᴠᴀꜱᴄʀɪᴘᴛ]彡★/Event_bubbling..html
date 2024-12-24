@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling 
+    </title>
+</head>
+<body>
+    	<div class="container">
+            <div class="subcontainer">
+                <div class="child">
+                    I am a child!
+                </div>
+            </div>
+        </div>
+
+        <script>
+        document.querySelector(".child").addEventListener("click", ()=>
+    {
+        alert("child was clicked!")
+    })
+
+    document.querySelector(".subcontainer").addEventListener("click", ()=>
+    {
+        alert("childsubcontainer was clicked!")
+    })
+
+    document.querySelector(".container").addEventListener("click", ()=>
+    {
+        alert("childContainer was clicked!")
+    })
+    function getRandomColor() {
+    let val1 = Math.ceil(0 + Math.random() * 255);
+    let val2 = Math.ceil(0 + Math.random() * 255);
+    let val3 = Math.ceil(0 + Math.random() * 255);
+    return `rgb(${val1}, ${val2}, ${val3})`;
+}
+
+setInterval(() => {
+    document.querySelector(".childContainer").style.background = getRandomColor();
+}, 3000);
+
+        </script>
+</body>
+</html>
