@@ -1,11 +1,4 @@
-function sum(a,b)
-{
-    console.log(a+b);
-}
+const URL="https://cat-fact.herokuapp.com/facts";
 
-function calculator(a,b,sumCallback)
-{
-    sumCallback(a,b);
-}
-
-calculator(1,2,sum);
+let promise=fetch(URL);
+console.log(promise);
