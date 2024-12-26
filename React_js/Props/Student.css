@@ -1,0 +1,13 @@
+
+
+.Student{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding:10px;
+    border:1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .Student p{
+    margin:0;
+  
+  }
