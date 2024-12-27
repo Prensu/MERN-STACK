@@ -1,0 +1,43 @@
+.list-category{
+    font-size:2.5em;
+    font-weight: bold;}
+  /* Heading styles */
+  .list-heading {
+    color: hsl(0, 0%, 20%);
+    margin-bottom: 10px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* List container styles */
+  .list-container {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px; /* Center align the list items */
+  }
+  
+  /* List item styles */
+  .list-item {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
+    margin-bottom: 10px;
+    text-align: center;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect */
+  .list-item:hover {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 10%);
+    transform: scale(1.05); /* Slightly enlarge the item */
+    cursor: pointer;
+  }
+  
+    
