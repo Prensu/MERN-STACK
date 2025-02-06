@@ -1,0 +1,1 @@
+was little bit struggling with api's and backend mongodb connections so i retraveled backend 

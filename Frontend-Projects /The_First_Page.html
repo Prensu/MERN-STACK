@@ -1,0 +1,96 @@
+<!-- note it has been made with tailwind css so you need not to worry about just html and boom @Prensu !  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        fadeIn: "fadeIn 0.5s ease-in-out",
+                        slideIn: "slideIn 0.5s ease-in-out",
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" },
+                        },
+                        slideIn: {
+                            "0%": { transform: "translateY(-10px)", opacity: "0" },
+                            "100%": { transform: "translateY(0)", opacity: "1" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-gray-100">
+    <!-- Header Section -->
+    <section id="header" class="bg-gray-800 text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="img/logo.png" class="h-10 animate-fadeIn" alt="Logo">
+                <span class="font-bold text-xl tracking-wider">My Shop</span>
+            </a>
+
+            <!-- Navbar -->
+            <nav>
+                <ul id="navbar" class="hidden md:flex space-x-6 animate-slideIn">
+                    <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                    <li><a href="shop.html" class="hover:text-yellow-400">Shop</a></li>
+                    <li><a href="blog.html" class="hover:text-yellow-400">Blog</a></li>
+                    <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                    <li><a href="cart.html" class="hover:text-yellow-400"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-gray-700 p-4 md:hidden animate-fadeIn">
+            <ul class="space-y-4 text-center">
+                <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="shop.html" class="hover:text-yellow-400">Shop</a></li>
+                <li><a href="blog.html" class="hover:text-yellow-400">Blog</a></li>
+                <li><a href="about.html" class="hover:text-yellow-400">About</a></li>
+                <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                <li><a href="cart.html" class="hover:text-yellow-400"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Hero Section -->
+   <!-- Hero Section -->
+<section id="hero" class="bg-[url('img/hero4.png')] bg-cover bg-right-top h-[90vh] flex flex-col justify-center items-start px-8 lg:px-20 space-y-4 animate-fadeIn animation-fill-forwards">
+    <h4 class="text-sm md:text-lg text-red-900 font-semibold animate-slideIn animation-fill-forwards">Trade-in-offer</h4>
+    <h2 class="text-3xl md:text-5xl text-black drop-shadow-lg animate-fadeIn animation-fill-forwards">Super value deals</h2>
+    <h1 class="text-4xl md:text-6xl text-black drop-shadow-lg animate-slideIn animation-fill-forwards">On all products</h1>
+    <p class="text-base md:text-lg text-pink-500 opacity-80 animate-fadeIn animation-fill-forwards">Save more with coupons & up to 70% off!</p>
+    <button class="mt-4 px-6 py-2 bg-yellow-500 text-black text-lg rounded-lg hover:bg-yellow-600 transition transform hover:scale-105 animate-fadeIn animation-fill-forwards">
+        Shop Now
+    </button>
+</section>
+
+    
+    <script>
+        // JavaScript to toggle mobile menu
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
