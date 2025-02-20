@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col items-center justify-center text-center">
+        <h1 id="title" class="text-6xl font-bold mb-4 opacity-0">Elon Musk</h1>
+        <p id="subtitle" class="text-xl opacity-0">Innovator, Entrepreneur, Visionary</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-800 text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 id="about-title" class="text-4xl font-bold opacity-0">About Me</h2>
+            <p id="about-text" class="text-gray-300 mt-4 opacity-0">
+                Elon Musk is known for his groundbreaking work at Tesla, SpaceX, and Neuralink.
+                His vision is to revolutionize space travel, electric vehicles, and artificial intelligence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 bg-gray-900 text-center">
+        <h2 id="projects-title" class="text-4xl font-bold opacity-0">Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8 mt-8 px-4 max-w-6xl mx-auto">
+            <div class="project-card opacity-0 bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold">Tesla</h3>
+                <p class="text-gray-300">Electric cars and clean energy.</p>
+            </div>
+            <div class="project-card opacity-0 bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold">SpaceX</h3>
+                <p class="text-gray-300">Mars exploration and reusable rockets.</p>
+            </div>
+            <div class="project-card opacity-0 bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold">Neuralink</h3>
+                <p class="text-gray-300">Brain-computer interface technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-800 text-center">
+        <h2 id="contact-title" class="text-4xl font-bold opacity-0">Contact</h2>
+        <p id="contact-text" class="text-gray-300 mt-4 opacity-0">Want to collaborate? Reach out!</p>
+        <a href="mailto:elon@spacex.com" class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-opacity opacity-0" id="contact-btn">
+            Email Elon
+        </a>
+    </section>
+
+    <!-- GSAP Animation -->
+    <script>
+        // Animate Hero Section
+        gsap.to("#title", { duration: 1, opacity: 1, y: -10 });
+        gsap.to("#subtitle", { duration: 1, opacity: 1, delay: 0.5 });
+
+        // Animate About Section
+        gsap.to("#about-title", { duration: 1, opacity: 1, scrollTrigger: "#about-title" });
+        gsap.to("#about-text", { duration: 1, opacity: 1, delay: 0.5, scrollTrigger: "#about-text" });
+
+        // Animate Projects Section
+        gsap.to("#projects-title", { duration: 1, opacity: 1, scrollTrigger: "#projects-title" });
+        gsap.to(".project-card", { opacity: 1, y: -10, stagger: 0.3, duration: 1, scrollTrigger: ".project-card" });
+
+        // Animate Contact Section
+        gsap.to("#contact-title", { duration: 1, opacity: 1, scrollTrigger: "#contact-title" });
+        gsap.to("#contact-text", { duration: 1, opacity: 1, delay: 0.5, scrollTrigger: "#contact-text" });
+        gsap.to("#contact-btn", { duration: 1, opacity: 1, delay: 1, scrollTrigger: "#contact-btn" });
+    </script>
+
+</body>
+</html>

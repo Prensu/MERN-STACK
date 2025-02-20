@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk - Visionary Entrepreneur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.min.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800/80 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Elon Musk</div>
+            <div class="space-x-8">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#ventures" class="hover:text-blue-400 transition-colors">Ventures</a>
+                <a href="#achievements" class="hover:text-blue-400 transition-colors">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="text-center">
+            <motion.h1 
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                class="text-5xl md:text-7xl font-bold mb-4"
+            >
+                Elon Musk
+            </motion.h1>
+            <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5, duration: 1 }}
+                class="text-xl md:text-2xl text-gray-300"
+            >
+                Innovator | Entrepreneur | Visionary
+            </motion.p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4">
+        <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            class="grid md:grid-cols-2 gap-12"
+        >
+            <div>
+                <h2 class="text-4xl font-bold mb-6">About Me</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    I'm Elon Musk, a technology entrepreneur and inventor. Born in South Africa, 
+                    I've dedicated my life to advancing human civilization through groundbreaking 
+                    innovations in space travel, sustainable energy, and artificial intelligence.
+                </p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-4">Quick Facts</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li>Born: June 28, 1971</li>
+                    <li>Nationality: South African, Canadian, American</li>
+                    <li>Education: University of Pennsylvania</li>
+                    <li>Net Worth: $250+ billion (2025)</li>
+                </ul>
+            </div>
+        </motion.div>
+    </section>
+
+    <!-- Ventures Section -->
+    <section id="ventures" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">My Ventures</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    class="bg-gray-700 p-6 rounded-lg"
+                >
+                    <h3 class="text-2xl font-semibold mb-4">Tesla</h3>
+                    <p class="text-gray-300">Revolutionizing transportation with electric vehicles and sustainable energy solutions.</p>
+                </motion.div>
+                <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    class="bg-gray-700 p-6 rounded-lg"
+                >
+                    <h3 class="text-2xl font-semibold mb-4">SpaceX</h3>
+                    <p class="text-gray-300">Making space travel accessible and working towards colonizing Mars.</p>
+                </motion.div>
+                <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    class="bg-gray-700 p-6 rounded-lg"
+                >
+                    <h3 class="text-2xl font-semibold mb-4">Neuralink</h3>
+                    <p class="text-gray-300">Developing brain-computer interface technologies to enhance human capabilities.</p>
+                </motion.div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Achievements</h2>
+        <div class="space-y-8">
+            <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                class="flex items-center space-x-4"
+            >
+                <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center">1</div>
+                <p class="text-gray-300">First successful Falcon Heavy launch (2018)</p>
+            </motion.div>
+            <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                class="flex items-center space-x-4"
+            >
+                <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center">2</div>
+                <p class="text-gray-300">Tesla Model 3 becomes best-selling EV worldwide</p>
+            </motion.div>
+            <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                class="flex items-center space-x-4"
+            >
+                <div class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center">3</div>
+                <p class="text-gray-300">Starlink provides global internet coverage</p>
+            </motion.div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2025 Elon Musk Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

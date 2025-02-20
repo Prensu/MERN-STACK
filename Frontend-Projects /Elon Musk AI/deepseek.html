@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk - Visionary Entrepreneur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@9.0.2/dist/framer-motion.js"></script>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-800/80 backdrop-blur-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <motion.a 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                href="#"
+                class="text-2xl font-bold text-emerald-400"
+            >
+                EM
+            </motion.a>
+            <div class="space-x-8">
+                <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+                <a href="#companies" class="hover:text-emerald-400 transition-colors">Companies</a>
+                <a href="#achievements" class="hover:text-emerald-400 transition-colors">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <motion.div 
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                class="md:w-1/2 mb-12 md:mb-0"
+            >
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg" 
+                    alt="Elon Musk"
+                    class="rounded-lg shadow-2xl w-full max-w-md"
+                >
+            </motion.div>
+            
+            <motion.div 
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                class="md:w-1/2 md:pl-12"
+            >
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Elon Musk
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-400 mb-8">
+                    CEO of Tesla, SpaceX, Neuralink & The Boring Company
+                </p>
+                <p class="text-lg text-slate-300 leading-relaxed">
+                    Revolutionizing sustainable energy, space exploration, 
+                    neural interfaces, and transportation infrastructure.
+                </p>
+            </motion.div>
+        </div>
+    </section>
+
+    <!-- Companies Section -->
+    <section id="companies" class="py-20 bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Major Ventures</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Tesla Card -->
+                <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-slate-700 p-8 rounded-xl"
+                >
+                    <h3 class="text-2xl font-bold text-emerald-400 mb-4">Tesla</h3>
+                    <p class="text-slate-300">
+                        Accelerating the world's transition to sustainable energy with 
+                        electric vehicles and clean energy solutions.
+                    </p>
+                </motion.div>
+
+                <!-- SpaceX Card -->
+                <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-slate-700 p-8 rounded-xl"
+                >
+                    <h3 class="text-2xl font-bold text-emerald-400 mb-4">SpaceX</h3>
+                    <p class="text-slate-300">
+                        Making humanity multiplanetary through revolutionary 
+                        space technologies and Mars colonization efforts.
+                    </p>
+                </motion.div>
+
+                <!-- Neuralink Card -->
+                <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-slate-700 p-8 rounded-xl"
+                >
+                    <h3 class="text-2xl font-bold text-emerald-400 mb-4">Neuralink</h3>
+                    <p class="text-slate-300">
+                        Developing ultra-high bandwidth brain-machine interfaces 
+                        to connect humans and computers.
+                    </p>
+                </motion.div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Key Achievements</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="p-8 bg-slate-800 rounded-xl"
+                >
+                    <h3 class="text-2xl font-bold mb-4">First Reusable Rockets</h3>
+                    <p class="text-slate-300">
+                        Revolutionized space travel with Falcon 9's first successful 
+                        landing and reflight of an orbital-class rocket.
+                    </p>
+                </motion.div>
+
+                <motion.div 
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="p-8 bg-slate-800 rounded-xl"
+                >
+                    <h3 class="text-2xl font-bold mb-4">Electric Vehicle Revolution</h3>
+                    <p class="text-slate-300">
+                        Made electric vehicles desirable with Tesla's Model S, 
+                        breaking automotive industry norms.
+                    </p>
+                </motion.div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://twitter.com/elonmusk" class="hover:text-emerald-400">Twitter</a>
+                <a href="https://www.tesla.com" class="hover:text-emerald-400">Tesla</a>
+                <a href="https://www.spacex.com" class="hover:text-emerald-400">SpaceX</a>
+            </div>
+            <p class="text-slate-400">
+                © 2023 Elon Musk. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
