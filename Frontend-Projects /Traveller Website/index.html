@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Vlogger Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans"><!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Vlogger Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Professional Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-gray-900 text-gray-200 font-sans">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-3xl font-bold text-white font-display">Wanderer’s Lens</a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#about" class="text-white hover:text-green-400 transition-colors">About</a>
+          <div class="relative group">
+            <button class="text-white hover:text-green-400 transition-colors flex items-center">
+              Gallery <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="absolute hidden group-hover:block bg-gray-800 rounded shadow-lg mt-2">
+              <a href="#gallery" class="block px-4 py-2 text-white hover:bg-gray-700">Photos</a>
+              <a href="#videos" class="block px-4 py-2 text-white hover:bg-gray-700">Videos</a>
+            </div>
+          </div>
+          <a href="#contact" class="text-white hover:text-green-400 transition-colors">Contact</a>
+          <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-colors">Subscribe</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-6 py-4">
+        <a href="#about" class="block py-2 text-white hover:text-green-400">About</a>
+        <a href="#gallery" class="block py-2 text-white hover:text-green-400">Gallery</a>
+        <a href="#contact" class="block py-2 text-white hover:text-green-400">Contact</a>
+        <a href="#" class="block py-2 text-white bg-green-600 text-center rounded-full mt-2">Subscribe</a>
+      </div>
+    </nav>
+  
+    <!-- Hero Section with Parallax -->
+    <section id="hero" class="relative h-screen bg-cover bg-center parallax-bg" data-speed="0.5" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
+        <div class="animate-fade-in">
+          <h1 class="text-5xl md:text-7xl font-bold text-white font-display mb-4">Journey Through Nature</h1>
+          <p class="text-xl md:text-2xl text-gray-300 font-body max-w-2xl mx-auto">Capturing the essence of forests, rivers, and wild landscapes.</p>
+          <a href="#gallery" class="mt-8 inline-block bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transform hover:scale-105 transition-all">Explore My Work</a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gray-800 text-center">
+      <h2 class="text-4xl font-bold text-white font-display mb-6 animate-fade-in">About Me</h2>
+      <p class="text-lg text-gray-300 font-body max-w-3xl mx-auto animate-fade-in delay-200">
+        I’m a seasoned travel vlogger with a passion for nature’s untouched beauty. My lens has captured misty forests, serene rivers, and rugged mountains across the globe. Let’s explore the wild together.
+      </p>
+    </section>
+  
+    <!-- Gallery Section with Parallax -->
+    <section id="gallery" class="py-20 px-6 bg-gray-900">
+      <h2 class="text-4xl font-bold text-white font-display text-center mb-12 animate-fade-in">Nature Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="relative group animate-slide-in-left">
+          <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Forest" class="w-full h-72 object-cover rounded-lg shadow-lg transform group-hover:scale-105 transition-transform">
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition-opacity rounded-lg">
+            <p class="text-white text-lg font-body opacity-0 group-hover:opacity-100 transition-opacity">Misty Forest</p>
+          </div>
+        </div>
+        <div class="relative group animate-slide-in-up">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="River" class="w-full h-72 object-cover rounded-lg shadow-lg transform group-hover:scale-105 transition-transform">
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition-opacity rounded-lg">
+            <p class="text-white text-lg font-body opacity-0 group-hover:opacity-100 transition-opacity">Crystal River</p>
+          </div>
+        </div>
+        <div class="relative group animate-slide-in-right">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Nature" class="w-full h-72 object-cover rounded-lg shadow-lg transform group-hover:scale-105 transition-transform">
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 flex items-center justify-center transition-opacity rounded-lg">
+            <p class="text-white text-lg font-body opacity-0 group-hover:opacity-100 transition-opacity">Green Escape</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Contact Section -->
+    <footer id="contact" class="py-20 px-6 bg-gray-800 text-center">
+      <h2 class="text-4xl font-bold text-white font-display mb-6 animate-fade-in">Get in Touch</h2>
+      <p class="text-lg text-gray-300 font-body mb-8 animate-fade-in delay-200">Collaborate or follow my journey!</p>
+      <form class="max-w-md mx-auto animate-slide-up">
+        <input type="email" placeholder="Your Email" class="w-full p-4 mb-4 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-green-500 font-body">
+        <textarea placeholder="Your Message" class="w-full p-4 mb-4 rounded-lg bg-gray-700 text-white border-none focus:ring-2 focus:ring-green-500 h-36 font-body"></textarea>
+        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transform hover:scale-105 transition-all font-body">Send Message</button>
+      </form>
+      <p class="mt-8 text-gray-300 font-body animate-fade-in delay-300">
+        Follow me: <a href="#" class="text-green-400 hover:underline">YouTube</a> | <a href="#" class="text-green-400 hover:underline">Instagram</a>
+      </p>
+    </footer>
+  
+    <script src="script.js"></script>
+  </body>
+  </html>
+  <!-- Header/Hero Section -->
+  <header class="relative h-screen bg-cover bg-center overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+    <nav class="flex justify-between items-center p-6 bg-black bg-opacity-50 text-white">
+      <h1 class="text-2xl font-bold animate-fade-in">Wanderer’s Lens</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-green-300 animate-fade-in delay-100">About</a></li>
+        <li><a href="#gallery" class="hover:text-green-300 animate-fade-in delay-200">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-green-300 animate-fade-in delay-300">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+      <div class="animate-slide-up">
+        <h2 class="text-5xl font-bold mb-4">Explore the Wild with Me</h2>
+        <p class="text-xl">A Vlogger Capturing Forests, Rivers, and Nature’s Soul</p>
+        <a href="#gallery" class="mt-6 inline-block bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition-transform transform hover:scale-105">View My Work</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 bg-white text-center">
+    <h2 class="text-4xl font-bold text-gray-800 mb-6 animate-fade-in">About Me</h2>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in delay-200">
+      I’m a passionate traveler and vlogger, chasing the beauty of nature. From dense forests to roaring rivers, I document the wild through my lens. Join me on this journey to uncover the world’s hidden gems!
+    </p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 px-6 bg-gray-100">
+    <h2 class="text-4xl font-bold text-gray-800 text-center mb-10 animate-fade-in">Nature Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="relative group animate-slide-in-left">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Forest" class="w-full h-64 object-cover rounded-lg breathe">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity">
+          <p class="text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity">Misty Forest</p>
+        </div>
+      </div>
+      <div class="relative group animate-slide-in-up">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="River" class="w-full h-64 object-cover rounded-lg breathe">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity">
+          <p class="text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity">Crystal River</p>
+        </div>
+      </div>
+      <div class="relative group animate-slide-in-right">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Nature" class="w-full h-64 object-cover rounded-lg breathe">
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 flex items-center justify-center transition-opacity">
+          <p class="text-white text-lg opacity-0 group-hover:opacity-100 transition-opacity">Green Escape</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact" class="py-16 px-6 bg-gray-800 text-white text-center">
+    <h2 class="text-4xl font-bold mb-6 animate-fade-in">Get in Touch</h2>
+    <p class="text-lg mb-4 animate-fade-in delay-200">Want to collaborate or follow my adventures?</p>
+    <form class="max-w-md mx-auto animate-slide-up">
+      <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 rounded bg-gray-700 text-white border-none focus:ring-2 focus:ring-green-500">
+      <textarea placeholder="Your Message" class="w-full p-3 mb-4 rounded bg-gray-700 text-white border-none focus:ring-2 focus:ring-green-500 h-32"></textarea>
+      <button type="submit" class="bg-green-600 text-white py-2 px-6 rounded hover:bg-green-700 transition-transform transform hover:scale-105">Send</button>
+    </form>
+    <p class="mt-6 animate-fade-in delay-300">Follow me: <a href="#" class="text-green-300 hover:underline">YouTube</a> | <a href="#" class="text-green-300 hover:underline">Instagram</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

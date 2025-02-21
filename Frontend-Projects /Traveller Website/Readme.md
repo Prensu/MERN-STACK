@@ -1,0 +1,1 @@
+This includes parallel scrolling effect along with animations , tailwind css , responsive 
